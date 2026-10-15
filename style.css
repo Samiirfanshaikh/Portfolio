@@ -1,0 +1,96 @@
+        :root {
+            --blue: #4d8dff;
+            --blue-strong: #2d6ef7;
+            --page: #0b1220;
+            --panel: rgba(15, 23, 42, 0.72);
+            --line: rgba(148, 163, 184, 0.18);
+            --muted: #94a3b8;
+            --bg: #080c14;
+            --text: #e2e8f0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Space Grotesk", "Segoe UI", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(ellipse at 78% 12%, rgba(38, 95, 190, .12), transparent 34%),
+                var(--bg);
+        }
+
+        ::selection {
+            background: var(--blue);
+            color: white;
+        }
+
+        .text-blue { color: var(--blue); }
+        .bg-blue { background-color: var(--blue); }
+        .bg-blue-600:hover { background-color: var(--blue-strong); }
+        .bg-page { background-color: var(--page); }
+        .bg-panel { background-color: var(--panel); }
+        .border-line { border-color: var(--line); }
+        .text-muted { color: var(--muted); }
+
+        .code-line {
+            display: grid;
+            grid-template-columns: 24px minmax(0, 1fr);
+            gap: 12px;
+            font-family: "DM Mono", monospace;
+            font-size: 12px;
+            line-height: 2.1;
+        }
+
+        .line-number {
+            color: #526078;
+            text-align: right;
+            user-select: none;
+        }
+
+        .syntax-blue { color: #82b7ff; }
+        .syntax-green { color: #9cdbac; }
+        .syntax-orange { color: #f0bd83; }
+        .syntax-purple { color: #c5a3ff; }
+
+        .editor-glow {
+            box-shadow: 0 20px 80px rgba(24, 78, 166, .13);
+        }
+
+        .project-card {
+            transition: transform .2s ease, border-color .2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: #456ba9;
+        }
+
+        .skill-card {
+            transition: background .2s ease, border-color .2s ease;
+        }
+
+        .skill-card:hover {
+            background: #131e30;
+            border-color: #405779;
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: .01ms !important;
+            }
+        }
