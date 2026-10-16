@@ -13,21 +13,34 @@
 </head>
 <body class="font-sans text-slate-100 antialiased">
     <header class="sticky top-0 z-50 border-b border-white/8 bg-page/90 backdrop-blur-xl">
-        <nav class="mx-auto flex w-[90%] max-w-6xl items-center justify-between gap-5">
-            <a href="#home" class="flex shrink-0 items-center gap-3 text-xl font-bold tracking-tight">
-                <img src="images/sami-shaikh-logo.png" alt="" class="h-11 w-11 rounded-lg object-cover" aria-hidden="true">
-                <span>Sami Shaikh</span>
-            </a>
-            <ul class="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-xs text-slate-400 sm:gap-x-7 sm:text-sm">
-                <li><a href="#home" class=" transition hover:text-blue-600">Home</a></li>
-                <li><a href="#about" class="transition hover:text-blue-600">About</a></li>
-                <li><a href="#skills" class="transition hover:text-blue-600">Skills</a></li>
-                <li><a href="#projects" class="transition hover:text-blue-600">Projects</a></li>
-                <li><a href="#contact" class="transition hover:text-blue-600">Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
+<nav class="relative mx-auto flex w-[90%] max-w-6xl items-center justify-between gap-5">
+    <a href="#home" class="flex shrink-0 items-center gap-3 text-xl font-bold tracking-tight">
+        <img
+            src="images/sami-shaikh-logo.png"
+            alt="Sami Shaikh logo"
+            class="h-11 w-11 rounded-lg object-cover">
+        <span>Sami Shaikh</span>
+    </a>
+    <button
+        id="menu-button"
+        type="button"
+        class="flex flex-col gap-1.5 rounded-md p-2 text-slate-200 md:hidden"
+        aria-label="Open navigation menu"
+        aria-controls="nav-links"
+        aria-expanded="false">
+        <span class="h-0.5 w-6 bg-current"></span>
+        <span class="h-0.5 w-6 bg-current"></span>
+        <span class="h-0.5 w-6 bg-current"></span>
+    </button>
+    <ul id="nav-links"
+        class="absolute left-0 right-0 top-full z-50 mt-3 hidden flex-col gap-5 rounded-xl border border-line bg-page p-5 text-sm text-slate-400 shadow-xl md:static md:mt-0 md:flex md:flex-row md:items-center md:justify-end md:gap-x-7 md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+        <li><a href="#home" class="transition hover:text-blue">Home</a></li>
+        <li><a href="#about" class="transition hover:text-blue">About</a></li>
+        <li><a href="#skills" class="transition hover:text-blue">Skills</a></li>
+        <li><a href="#projects" class="transition hover:text-blue">Projects</a></li>
+        <li><a href="#contact" class="transition hover:text-blue">Contact</a></li>
+    </ul>
+</nav>
     </header>
     <main>
         <section id="home" class="mx-auto grid min-h-[162.5px] w-[90%] max-w-6xl items-center gap-14 py-20 lg:grid-cols-[1.05fr_.95fr] lg:py-24">
@@ -178,10 +191,8 @@
             <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 <article class="skill-card rounded-xl border border-line bg-panel/60 p-5">
                     <div class="mb-5 flex items-center justify-between">
-                        <span class="text-2xl font-bold text-orange-400">5</span>
-                        <span class="font-mono text-xs text-slate-500">01</span>
+                        <span class="text-2xl font-bold text-orange-400">HTML5</span>
                     </div>
-                    <h3 class="font-semibold">HTML</h3>
                     <p class="mt-2 text-sm leading-6 text-muted">Semantic structure, forms, and accessible page layouts.</p>
                 </article>
                 <article class="skill-card rounded-xl border border-line bg-panel/60 p-5">
